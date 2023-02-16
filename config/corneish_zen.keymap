@@ -77,23 +77,23 @@
    &grescgui &kp N1 &kp N2 &kp N3 &kp N4  &kp N5   &kp N6 &kp N7 &kp N8 &kp N9 &kp N0    &kp MINUS
    &kp TAB   &none  &none  &none  &none   &none    &none  &none  &none  &none  &kp EQUAL &kp RBKT
    &kp LSHFT &none  &none  &none  &none   &none    &none  &none  &none  &none  &none     &mt RSHFT BSLH  
-                           &trans &trans &trans    &trans &trans &trans
+                           &trans &trans  &trans   &trans &trans &trans
                         >;
                 };
 
                 raise_layer {
-                        label = "FUNC";
+                        label = "FUNCTION";
 // -----------------------------------------------------------------------------
 // | ESC | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 |     |
-// | TAB | F11 | F12 |     |     |     |   |     |     |  UP |     |     |     |
+// | TAB | F11 | F12 |     |     |     |   |     | PGU |  UP | PGD |     |     |
 // |BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |     | LFT | DWN | RGT |     | SHFT|
 //                   | CTL | GUI | SPC |   | ENT | BSPC| OPT |
 //                   |     |     |(FNC)|   |(NUM)|     |     |
                         bindings = <
-   &grescgui  &kp F1       &kp F2       &kp F3       &kp F4       &kp F5         &kp F6 &kp F7   &kp F8   &kp F9     &kp F10 &none
-   &kp TAB    &kp F11      &kp F12      &none        &none        &none          &none  &none    &kp UP   &none      &none   &none
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &none  &kp LEFT &kp DOWN &kp RIGHT  &none   &kp RSHFT
-                                            &trans   &trans       &trans         &trans &trans   &trans
+   &grescgui  &kp F1       &kp F2       &kp F3       &kp F4       &kp F5         &kp F6 &kp F7    &kp F8   &kp F9    &kp F10 &none
+   &kp TAB    &kp F11      &kp F12      &none        &none        &none          &none  &kp PG_UP &kp UP   &kp PG_DN &none   &none
+   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &none  &kp LEFT  &kp DOWN &kp RIGHT &none   &kp RSHFT
+                                            &trans   &trans       &trans         &trans &trans    &trans
                         >;
                 };
         };
