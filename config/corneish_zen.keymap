@@ -42,15 +42,14 @@
                         label = "LETTERS";
 // -----------------------------------------------------------------------------
 // | ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | BSPC|
-// | TAB |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |  '  |
+// | TAB | A/Å |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  | ;/Ö | '/Ä |
 // | SHFT|  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  | SHFT|
-//                   | CTL | GUI | SPC |   | ENT |     | OPT |
-//                   |     |     |(NUM)|   |(SYM)|     |     |
+//                   | LTR | NUM | SPC |   | ENT | SYM | FNC |
                         bindings = <
-    &grescgui &kp Q &kp W  &kp E     &kp R    &kp T           &kp Y       &kp U &kp I     &kp O   &kp P    &kp LBKT
-    &kp TAB   &kp A &kp S  &kp D     &kp F    &kp G           &kp H       &kp J &kp K     &kp L   &kp SEMI &kp APOS
-    &kp LSHFT &kp Z &kp X  &kp C     &kp V    &kp B           &kp N       &kp M &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-                           &kp LCTRL &kp LGUI &mt NUM SPACE   &mt SYM RET &none &kp RALT
+    &grescgui &kp Q &kp W  &kp E     &kp R    &kp T       &kp Y   &kp U   &kp I     &kp O   &kp P    &kp LBKT
+    &kp TAB   &kp A &kp S  &kp D     &kp F    &kp G       &kp H   &kp J   &kp K     &kp L   &kp SEMI &kp APOS
+    &kp LSHFT &kp Z &kp X  &kp C     &kp V    &kp B       &kp N   &kp M   &kp COMMA &kp DOT &kp FSLH &kp RSHFT
+                           &to LTR   &to NUM  &kp SPACE   &kp RET &to SYM &to FNC
                         >;
                 };
                 number_layer {
@@ -59,13 +58,12 @@
 // | ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC|
 // | TAB |     |     |     |     |     |   | LFT | DWN | UP  | RGT |     |     |
 // | SHFT|     |     |     |     |     |   |     | PGD | PGP |     |     | SHFT|
-//                   | CTL | GUI | SPC |   | ENT |     | OPT |
-//                   |     |     |(LTR)|   |(SYM)|     |     |
+//                   | LTR | NUM | SPC |   | ENT | SYM | FNC |
                         bindings = <
-    &trans &kp N1 &kp N2 &kp N3 &kp N4 &kp N5          &kp N6      &kp N7    &kp N8    &kp N9     &kp N0 &trans
-    &trans &none  &none  &none  &none  &none           &kp LEFT    &kp DOWN  &kp UP    &kp RIGHT  &none  &none 
-    &trans &none  &none  &none  &none  &none           &none       &kp PG_DN &kp PG_UP &none      &none  &trans
-                         &trans &trans &mt LTR SPACE   &mt FNC RET &trans    &trans
+    &trans &kp N1 &kp N2 &kp N3 &kp N4 &kp N5   &kp N6   &kp N7    &kp N8    &kp N9     &kp N0 &trans
+    &trans &none  &none  &none  &none  &none    &kp LEFT &kp DOWN  &kp UP    &kp RIGHT  &none  &none 
+    &trans &none  &none  &none  &none  &none    &none    &kp PG_DN &kp PG_UP &none      &none  &trans
+                         &trans &trans &trans   &trans   &trans    &trans
                         >;
                 };
                 symbol_layer {
@@ -74,13 +72,12 @@
 // | ESC |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC|
 // | TAB |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `  |
 // | SHFT|     |     |     |     |     |   |  _  |  +  |  {  |  }  |  |  |  ~  |
-//                   | CTL | GUI | SPC |   | ENT |     | OPT |
-//                   |     |     |(LTR)|   |(FNC)|     |     |
+//                   | LTR | NUM | SPC |   | ENT | SYM | FNC |
                         bindings = <
-   &trans &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT       &kp CARET   &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-   &trans &none    &none  &none    &none    &none           &kp MINUS   &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &trans &none    &none  &none    &none    &none           &kp UNDER   &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                          &trans   &trans   &mt FNC SPACE   &mt LTR RET &trans    &trans
+   &trans &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
+   &trans &none    &none  &none    &none    &none       &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
+   &trans &none    &none  &none    &none    &none       &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
+                          &trans   &trans   &trans      &trans    &trans    &trans
                         >;
                 };
                 function_layer {
@@ -89,13 +86,12 @@
 // | F1  | F2  | F3  | F4  | F5  | F6  |   | F7  | F8  | F9  | F10 | F11 | F12 |
 // |     |     |     |     |     |     |   |     |     |     |     |     |     |
 // |BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |     |     |     |     |
-//                   | CTL | GUI | SPC |   | ENT |     | OPT |
-//                   |     |     |(FNC)|   |(NUM)|     |     |
+//                   | LTR | NUM | SPC |   | ENT | SYM | FNC |
                         bindings = <
    &kp F1     &kp F2       &kp F3       &kp F4       &kp F5       &kp F6          &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
    &none      &none        &none        &none        &none        &none           &none  &none  &none  &none   &none   &none
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &none  &none  &none  &none   &none   &none
-                                            &trans   &trans       &mt LTR RET     &mt LTR RET   &trans &trans
+                                                &trans   &trans   &trans          &trans &trans &trans
                         >;
                 };
         };
