@@ -105,10 +105,10 @@
 // | SHFT|  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  | SHFT|
 //                   | LTR | NUM | SPC |   | ENT | SYM | FNC |
                         bindings = <
-    &grescgui &kp Q &kp W  &kp E     &kp R    &kp T       &kp Y   &kp U   &kp I     &kp O   &kp P    &bspcdel
-    &kp TAB   &kp A &kp S  &kp D     &kp F    &kp G       &kp H   &kp J   &kp K     &kp L   &kp SEMI &kp APOS
-    &kp LSHFT &kp Z &kp X  &kp C     &kp V    &kp B       &kp N   &kp M   &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-                           &to LTR   &to NUM  &kp SPACE   &kp RET &to SYM &to FNC
+    &grescgui &kp Q &kp W       &kp E         &kp R      &kp T   &kp Y   &kp U      &kp I      &kp O      &kp P    &bspcdel
+    &kp TAB   &kp A &mt LCTL S  &mt LALT D    &mt LGUI F &kp G   &kp N   &mt RGUI J &mt RALT K &mt RCTL L &kp SEMI &kp APOS
+    &sk LSHFT &kp Z &kp X  &kp C     &kp V    &kp B              &kp N   &kp M   &kp COMMA  &kp DOT    &kp FSLH   &sl RSHFT
+                           &to LTR   &to NUM  &kp SPACE          &kp RET &to SYM &to FNC
                         >;
                 };
                 number_layer {
@@ -119,10 +119,10 @@
 // | SHFT|     |     |     |     |     |   |     | PGD | PGP |     |     | SHFT|
 //                   | LTR | NUM | SPC |   | ENT | SYM | FNC |
                         bindings = <
-    &trans &kp N1 &kp N2 &kp N3 &kp N4 &kp N5   &kp N6   &kp N7    &kp N8    &kp N9     &kp N0 &trans
-    &trans &ao  &ae  &oe  &none  &none    &kp LEFT &kp DOWN  &kp UP    &kp RIGHT  &none  &none 
-    &trans &none  &none  &none  &none  &none    &none    &kp PG_DN &kp PG_UP &none      &none  &trans
-                         &trans &trans &trans   &trans   &trans    &trans
+    &trans &kp N1 &kp N2    &kp N3   &kp N4   &kp N5   &kp N6   &kp N7    &kp N8    &kp N9     &kp N0 &trans
+    &trans &none  &kp LCTL  &kp LALT &kp LGUI &none    &kp LEFT &kp DOWN  &kp UP    &kp RIGHT  &none  &none 
+    &trans &none  &none     &none    &none    &none    &none    &kp PG_DN &kp PG_UP &none      &none  &trans
+                            &trans   &trans   &trans   &trans   &trans    &trans
                         >;
                 };
                 symbol_layer {
@@ -133,9 +133,9 @@
 // | SHFT|     |     |     |     |     |   |  _  |  +  |  {  |  }  |  |  |  ~  |
 //                   | LTR | NUM | SPC |   | ENT | SYM | FNC |
                         bindings = <
-   &trans &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &trans
-   &trans &none    &none  &none    &none    &none       &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &trans &none    &none  &none    &none    &none       &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
+   &trans &kp EXCL &kp AT   &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &trans
+   &trans &none    &kp LCTL &kp LALT &kp LGUI &none       &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
+   &trans &none    &none    &none    &none    &none       &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
                           &trans   &trans   &trans      &trans    &trans    &trans
                         >;
                 };
@@ -147,9 +147,9 @@
 // |BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |     |     |     |     |
 //                   | LTR | NUM | SPC |   | ENT | SYM | FNC |
                         bindings = <
-   &kp F1     &kp F2       &kp F3       &kp F4       &kp F5       &kp F6          &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
-   &none      &none        &none        &none        &none        &none           &none  &none  &none  &none   &none   &none
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &none  &none  &none  &none   &none   &none
+   &kp F1     &kp F2       &kp F3       &kp F4       &kp F5       &kp F6          &kp F7 &kp F8   &kp F9   &kp F10  &kp F11 &kp F12
+   &trans     &none        &kp LCTL     &kp LALT     &kp LGUI     &none           &none  &kp RGUI &kp RALT &kp RCTL &none   &none
+   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &none  &none    &none    &none    &none   &none
                                                 &trans   &trans   &trans          &trans &trans &trans
                         >;
                 };
