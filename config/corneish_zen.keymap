@@ -61,6 +61,20 @@
 };
 
 / {
+    behaviors {
+        bm: bottomrow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BOTTOMROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&to>;
+        };
+    };
+};
+
+/ {
     macros {
         ao: ao {
             label = "å";
@@ -122,7 +136,7 @@
     &grescgui &kp Q &kp W      &kp E      &kp R      &kp T       &kp Y   &kp U      &kp I      &kp O      &kp P    &bspcdel
     &kp TAB   &kp A &hm LCTL S &hm LALT D &hm LGUI F &kp G       &kp H   &hm RGUI J &hm RALT K &hm RCTL L &kp SEMI &kp APOS
     &sk LSHFT &kp Z &kp X      &kp C      &kp V      &kp B       &kp N   &kp M      &kp COMMA  &kp DOT    &kp FSLH &sk RSHFT
-                               &to LTR    &to NUM    &kp SPACE   &kp RET &to SYM    &to FNC
+                               &bm LCTL LTR    &bm LGUI NUM    &kp SPACE   &kp RET &bm RGUI SYM    &bm RALT FNC
                         >;
                 };
                 number_layer {
