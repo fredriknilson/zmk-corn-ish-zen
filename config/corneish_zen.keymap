@@ -107,7 +107,7 @@
                         bindings = <
     &grescgui &kp Q &kp W       &kp E         &kp R      &kp T   &kp Y   &kp U      &kp I      &kp O      &kp P    &bspcdel
     &kp TAB   &kp A &mt LCTL S  &mt LALT D    &mt LGUI F &kp G   &kp N   &mt RGUI J &mt RALT K &mt RCTL L &kp SEMI &kp APOS
-    &sk LSHFT &kp Z &kp X  &kp C     &kp V    &kp B              &kp N   &kp M   &kp COMMA  &kp DOT    &kp FSLH   &sl RSHFT
+    &sk LSHFT &kp Z &kp X  &kp C     &kp V    &kp B              &kp N   &kp M   &kp COMMA  &kp DOT    &kp FSLH   &sk RSHFT
                            &to LTR   &to NUM  &kp SPACE          &kp RET &to SYM &to FNC
                         >;
                 };
