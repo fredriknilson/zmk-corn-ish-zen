@@ -157,14 +157,14 @@
                         label = "NAVIGATION";
 // -----------------------------------------------------------------------------
 // | ESC |     |     |     |     |     |   |     |     |     |     |     | BSPC|
-// | TAB |     |     |     |     |     |   |     |     |     |     |     |     |
-// | SHFT|     |     |     |     |     |   |     |     |     |     |     | SHFT|
+// | TAB |     |     |     |     |     |   |     | LFT | DWN | UP  | RGT |     |
+// | SHFT|     |     |     |     |     |   |     | HOME| PGD | PGP | END | SHFT|
 //                   | LTR | NUM | SPC |   | ENT | NAV | FNC |
                         bindings = <
-   &trans &none &none &none  &none  &none    &none  &none  &none  &none &none &trans
-   &trans &none &none &none  &none  &none    &none  &none  &none  &none &none &none
-   &trans &none &none &none  &none  &none    &none  &none  &none  &none &none &trans
-                      &trans &trans &trans   &trans &trans &trans
+    &trans &none &none &none  &none  &none    &none  &none    &none     &none     &none     &trans
+    &trans &none &none &none  &none  &none    &none  &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none
+    &trans &none &none &none  &none  &none    &none  &kp HOME &kp PG_DN &kp PG_UP &kp END   &trans
+                       &trans &trans &trans   &trans &trans &trans
                         >;
                 };
                 function_layer {
