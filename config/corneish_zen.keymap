@@ -11,7 +11,7 @@
 
 #define LTR 0
 #define NUM 1
-#define SYM 2
+#define NAV 2
 #define FNC 3
 
 / {
@@ -129,42 +129,42 @@
                         label = "LETTERS";
 // -----------------------------------------------------------------------------
 // | ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | BSPC|
-// | TAB | A/Å |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  | ;/Ö | '/Ä |
+// | TAB |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |  '  |
 // | SHFT|  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  | SHFT|
-//                   | LTR | NUM | SPC |   | ENT | SYM | FNC |
+//                   | LTR | NUM | SPC |   | ENT | NAV | FNC |
                         bindings = <
     &grescgui &kp Q &kp W &kp E        &kp R        &kp T       &kp Y   &kp U        &kp I        &kp O   &kp P    &bspcdel
-    &kp TAB   &kp A &kp S &kp D        &kp F        &kp G       &kp H   &kp  J       &kp K        &kp L   &kp SEMI &kp APOS
+    &kp TAB   &kp A &kp S &kp D        &kp F        &kp G       &kp H   &kp J        &kp K        &kp L   &kp SEMI &kp APOS
     &sk LSHFT &kp Z &kp X &kp C        &kp V        &kp B       &kp N   &kp M        &kp COMMA    &kp DOT &kp FSLH &sk RSHFT
-                          &bm LCTL LTR &bm LGUI NUM &kp SPACE   &kp RET &bm RGUI SYM &bm RALT FNC
+                          &bm LCTL LTR &bm LGUI NUM &kp SPACE   &kp RET &bm RGUI NAV &bm RALT FNC
                         >;
                 };
                 number_layer {
                         label = "NUMBER";
 // -----------------------------------------------------------------------------
 // | ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC|
-// | TAB | ao  | ae  | oe  |     |     |   | LFT | DWN | UP  | RGT |     |     |
-// | SHFT|     |     |     |     |     |   |     | PGD | PGP |     |     | SHFT|
-//                   | LTR | NUM | SPC |   | ENT | SYM | FNC |
+// | TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |  `  |
+// | SHFT|  -  |  =  |  [  |  ]  |  \  |   |  _  |  +  |  {  |  }  |  |  |  ~  | 
+//                   | LTR | NUM | SPC |   | ENT | NAV | FNC |
                         bindings = <
-    &trans &kp N1 &kp N2 &kp N3 &kp N4 &kp N5   &kp N6 &kp N7    &kp N8    &kp N9 &kp N0 &trans
-    &trans &none  &none  &none  &none  &none    &none  &none     &none     &none  &none  &none
-    &trans &none  &none  &none  &none  &none    &none  &kp PG_DN &kp PG_UP &none  &none  &trans
-                         &trans &trans &trans   &trans &trans    &trans
+    &trans &kp N1    &kp N2    &kp N3   &kp N4   &kp N5      &kp N6    &kp N7    &kp N8          &kp N9   &kp N0   &trans
+    &trans &kp EXCL  &kp AT    &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp GRAVE
+    &trans &kp MINUS &kp EQUAL &kp LBKT &kp RBKT &kp BSLH    &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
+                               &trans   &trans   &trans      &trans    &trans    &trans
                         >;
                 };
-                symbol_layer {
-                        label = "SYMBOL";
+                navigation_layer {
+                        label = "NAVIGATION";
 // -----------------------------------------------------------------------------
-// | ESC |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC|
-// | TAB |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `  |
-// | SHFT|     |     |     |     |     |   |  _  |  +  |  {  |  }  |  |  |  ~  |
-//                   | LTR | NUM | SPC |   | ENT | SYM | FNC |
+// | ESC |     |     |     |     |     |   |     |     |     |     |     | BSPC|
+// | TAB |     |     |     |     |     |   |     |     |     |     |     |     |
+// | SHFT|     |     |     |     |     |   |     |     |     |     |     | SHFT|
+//                   | LTR | NUM | SPC |   | ENT | NAV | FNC |
                         bindings = <
-   &trans &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &trans
-   &trans &none    &none  &none    &none    &none       &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &trans &none    &none  &none    &none    &none       &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                          &trans   &trans   &trans      &trans    &trans    &trans
+   &trans &none &none &none  &none  &none    &none  &none  &none  &none &none &trans
+   &trans &none &none &none  &none  &none    &none  &none  &none  &none &none &none
+   &trans &none &none &none  &none  &none    &none  &none  &none  &none &none &trans
+                      &trans &trans &trans   &trans &trans &trans
                         >;
                 };
                 function_layer {
@@ -173,12 +173,12 @@
 // | F1  | F2  | F3  | F4  | F5  | F6  |   | F7  | F8  | F9  | F10 | F11 | F12 |
 // |     |     |     |     |     |     |   |     |     |     |     |     |     |
 // |BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |     |     |     |     |
-//                   | LTR | NUM | SPC |   | ENT | SYM | FNC |
+//                   | LTR | NUM | SPC |   | ENT | NAV | FNC |
                         bindings = <
-   &kp F1     &kp F2       &kp F3       &kp F4       &kp F5       &kp F6          &kp F7 &kp F8   &kp F9   &kp F1   &kp F11 &kp F12
-   &trans     &none        &none        &none        &none        &none           &none  &kp RGUI &kp RALT &kp RCTL &none   &none
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &none  &none    &none    &none    &none   &none
-                                                &trans   &trans   &trans          &trans &trans   &trans
+   &kp F1     &kp F2       &kp F3       &kp F4       &kp F5       &kp F6          &kp F7 &kp F8 &kp F9 &kp F1 &kp F11 &kp F12
+   &trans     &none        &none        &none        &none        &none           &none  &none  &none  &none  &none   &none
+   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &none  &none  &none  &none  &none   &none
+                                                &trans   &trans   &trans          &trans &trans &trans
                         >;
                 };
         };
