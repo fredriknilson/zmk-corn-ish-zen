@@ -14,6 +14,13 @@
 #define NAV 2
 #define FNC 3
 
+&mt {
+    require-prior-idle-ms = <50>;
+    quick-tap-ms = <50>;
+    flavor = "balanced";
+    bindings = <&kp>, <&kp>;
+};
+
 / {
     chosen {
         zmk,matrix_transform = &default_transform;
@@ -51,29 +58,11 @@
 
 / {
     behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
     };
 };
 
 / {
     behaviors {
-        bm: bottomrow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "BOTTOMROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&to>;
-        };
     };
 };
 
@@ -146,10 +135,10 @@
             //                   | LTR | NUM | SPC |   | ENT | NAV | FNC |
 
             bindings = <
-&grescgui  &kp Q             &kp W               &kp E           &kp R       &kp T        &kp Y    &kp U            &kp I            &kp O               &kp P                 &bspcdel
-&kp TAB    &mt LEFT_SHIFT A  &mt LEFT_CONTROL S  &mt LEFT_ALT D  &mt LGUI F  &kp G        &kp H    &mt RIGHT_GUI J  &mt RIGHT_ALT K  &mt LEFT_CONTROL L  &mt RIGHT_SHIFT SEMI  &kp APOS
-&sk LSHFT  &kp Z             &kp X               &kp C           &kp V       &kp B        &kp N    &kp M            &kp COMMA        &kp DOT             &kp FSLH              &sk RSHFT
-                                                 &to 0           &to 1       &kp SPACE    &kp RET  &to 2            &to 3
+&grescgui  &kp Q             &kp W               &kp E           &kp R       &kp T          &kp Y    &kp U             &kp I            &kp O               &kp P                 &bspcdel
+&kp TAB    &mt LEFT_SHIFT A  &mt LEFT_CONTROL S  &mt LEFT_ALT D  &mt LGUI F  &kp G          &kp H    &mt RIGHT_GUI J   &mt RIGHT_ALT K  &mt LEFT_CONTROL L  &mt RIGHT_SHIFT SEMI  &kp APOS
+&sk LSHFT  &kp Z             &kp X               &kp C           &kp V       &kp B          &kp N    &kp M             &kp COMMA        &kp DOT             &kp FSLH              &sk RSHFT
+                                                 &kp C_PREV      &kp C_STOP  &lt 1 SPACE    &kp RET  &kp C_PLAY_PAUSE  &kp C_NEXT
             >;
         };
 
@@ -163,27 +152,10 @@
             //                   | LTR | NUM | SPC |   | ENT | NAV | FNC |
 
             bindings = <
-&trans  &kp N1     &kp N2     &kp N3    &kp N4    &kp N5       &kp N6     &kp N7    &kp N8           &kp N9    &kp N0    &trans
-&trans  &kp EXCL   &kp AT     &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp PLUS
-&trans  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH     &kp UNDER  &kp PLUS  &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
-                              &trans    &trans    &trans       &trans     &trans    &trans
-            >;
-        };
-
-        navigation_layer {
-            label = "NAVIGATION";
-
-            // -----------------------------------------------------------------------------
-            // | ESC |     |     |     |     |     |   |     |     |     |     |     | BSPC|
-            // | TAB |     |     |     |     |     |   |     | LFT | DWN | UP  | RGT |     |
-            // | SHFT|     |     |     |     |     |   |     | HOME| PGD | PGP | END | SHFT|
-            //                   | LTR | NUM | SPC |   | ENT | NAV | FNC |
-
-            bindings = <
-&trans  &none  &none  &none   &none   &none     &none   &none     &none      &none      &none      &trans
-&trans  &none  &none  &none   &none   &none     &none   &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none
-&trans  &none  &none  &none   &none   &none     &none   &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans
-                      &trans  &trans  &trans    &trans  &trans    &trans
+&trans  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&trans  &kp N1           &kp N2       &kp N3    &kp N4      &kp N5         &kp N6     &kp N7         &kp N8        &kp N9                &kp N0                 &trans
+&trans  &kp MINUS        &kp EQUAL    &kp LBKT  &kp RBKT    &kp BSLH       &kp UNDER  &kp PLUS       &kp LBRC      &kp RBRC              &kp PIPE               &trans
+                                      &trans    &trans      &trans         &trans     &trans         &trans
             >;
         };
 
@@ -197,9 +169,9 @@
             //                   | LTR | NUM | SPC |   | ENT | NAV | FNC |
 
             bindings = <
-&kp F1      &kp F2          &kp F3            &kp F4        &kp F5        &kp F6          &kp F7  &kp F8    &kp F9         &kp F1             &kp F11          &kp F12
-&trans      &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LGUI      &none           &none   &kp RGUI  &kp RIGHT_ALT  &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &none
-&bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none   &none     &none          &none              &none            &none
+&kp F1      &kp F2          &kp F3            &kp F4        &kp F5        &kp F6          &kp F7  &kp F8    &kp F9       &kp F1         &kp F11    &kp F12
+&trans      &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LGUI      &none           &none   &kp LEFT  &kp UP       &kp DOWN       &kp RIGHT  &none
+&bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none   &kp HOME  &kp PAGE_UP  &kp PAGE_DOWN  &kp END    &none
                                               &trans        &trans        &trans          &trans  &trans    &trans
             >;
         };
