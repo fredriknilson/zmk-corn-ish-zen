@@ -169,10 +169,10 @@
             //                   | LTR | NUM | SPC |   | ENT | NAV | FNC |
 
             bindings = <
-&kp F1      &kp F2          &kp F3            &kp F4        &kp F5        &kp F6          &kp F7  &kp F8    &kp F9       &kp F1         &kp F11    &kp F12
-&trans      &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LGUI      &none           &none   &kp LEFT  &kp UP       &kp DOWN       &kp RIGHT  &none
-&bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none   &kp HOME  &kp PAGE_UP  &kp PAGE_DOWN  &kp END    &none
-                                              &trans        &trans        &trans          &trans  &trans    &trans
+&kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6          &kp F7  &kp F8         &kp F9         &kp F1             &kp F11         &kp F12
+&trans      &kp LEFT      &kp UP        &kp DOWN      &kp RIGHT     &none           &none   &kp RIGHT_GUI  &kp RIGHT_ALT  &kp RIGHT_CONTROL  &kp LEFT_SHIFT  &none
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none   &kp HOME       &kp PAGE_UP    &kp PAGE_DOWN      &kp END         &none
+                                        &trans        &trans        &trans          &trans  &trans         &trans
             >;
         };
     };
