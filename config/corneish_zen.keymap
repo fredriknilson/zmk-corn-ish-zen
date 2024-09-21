@@ -172,8 +172,10 @@
 &grescgui  &kp Q             &kp W               &kp E           &kp R       &kp T          &kp Y        &kp U            &kp I            &kp O               &kp P                 &bspcdel
 &kp TAB    &mt LEFT_SHIFT A  &mt LEFT_CONTROL S  &mt LEFT_ALT D  &mt LGUI F  &kp G          &kp H        &mt RIGHT_GUI J  &mt RIGHT_ALT K  &mt LEFT_CONTROL L  &mt RIGHT_SHIFT SEMI  &kp APOS
 &sk LSHFT  &kp Z             &kp X               &kp C           &kp V       &kp B          &kp N        &kp M            &kp COMMA        &kp DOT             &kp FSLH              &sk RSHFT
-                                                 &lt 4 ESCAPE    &lt 2 TAB   &lt 1 SPACE    &lt 6 ENTER  &lt 5 BACKSPACE  &lt 7 DELETE
+                                                 &lt 4 ESCAPE    &lt 2 TAB   &lt 1 SPACE    &lt 5 ENTER  &lt 6 BACKSPACE  &lt 7 DELETE
             >;
+
+            label = "Base";
         };
 
         Nav {
@@ -185,10 +187,12 @@
 
             bindings = <
 &none  &none           &none             &none         &none         &none     &U_RDO        &U_PST    &U_CPY       &U_CUT         &U_UND     &none
-&none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &none     &kp CAPSLOCK  &kp LEFT  &kp UP       &kp UP         &kp RIGHT  &none
+&none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &none     &kp CAPSLOCK  &kp LEFT  &kp UP       &kp DOWN       &kp RIGHT  &none
 &none  &none           &none             &none         &none         &none     &kp INSERT    &kp HOME  &kp PAGE_UP  &kp PAGE_DOWN  &kp END    &none
                                          &trans        &trans        &trans    &trans        &trans    &trans
             >;
+
+            label = "Nav";
         };
 
         Mouse {
@@ -198,6 +202,8 @@
 &none  &none      &none      &none     &none     &none    &none      &none      &none      &none   &none   &none
                              &none     &none     &none    &mkp LCLK  &mkp MCLK  &mkp RCLK
             >;
+
+            label = "Mouse";
         };
 
         Button {
@@ -207,15 +213,19 @@
 &trans  &U_UND          &U_CUT            &U_CPY        &U_PST        &U_RDO       &U_RDO     &U_PST         &U_CPY         &U_CUT             &U_UND           &trans
                                           &mkp LCLK     &mkp MCLK     &mkp RCLK    &mkp LCLK  &mkp MCLK      &mkp RCLK
             >;
+
+            label = "Button";
         };
 
         Media {
             bindings = <
-&none  &none           &none             &none         &none         &none    &none       &none             &none              &none            &none         &none
-&none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &none    &none       &kp K_PREVIOUS    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_NEXT    &none
-&none  &none           &none             &none         &none         &none    &none       &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2     &bt BT_SEL 3  &none
-                                         &none         &none         &none    &kp K_STOP  &kp K_PLAY_PAUSE  &kp K_MUTE
+&none  &none           &none             &none         &none         &none    &none      &none             &kp C_BRI_DN       &kp C_BRI_UP     &none         &none
+&none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &none    &none      &kp C_PREV        &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT    &none
+&none  &none           &none             &none         &none         &none    &none      &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2     &bt BT_SEL 3  &none
+                                         &none         &none         &none    &kp K_APP  &kp C_PLAY_PAUSE  &kp C_MUTE
             >;
+
+            label = "Media";
         };
 
         Number {
@@ -226,11 +236,13 @@
             //                   | LTR | NUM | SPC |   | ENT | NAV | FNC |
 
             bindings = <
-&trans  &kp LEFT_BRACKET  &kp N7  &kp N8   &kp N9  &kp RIGHT_BRACKET    &none  &none          &none          &none          &none            &trans
-&trans  &kp SEMI          &kp N4  &kp N5   &kp N6  &kp EQUAL            &none  &kp RIGHT_GUI  &kp RIGHT_ALT  &kp RIGHT_ALT  &kp RIGHT_SHIFT  &trans
-&trans  &kp GRAVE         &kp N1  &kp N2   &kp N3  &kp BSLH             &none  &none          &none          &none          &none            &trans
+&trans  &kp LEFT_BRACKET  &kp N7  &kp N8   &kp N9  &kp RIGHT_BRACKET    &none  &none          &none          &none              &none            &trans
+&trans  &kp SEMI          &kp N4  &kp N5   &kp N6  &kp EQUAL            &none  &kp RIGHT_GUI  &kp RIGHT_ALT  &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &trans
+&trans  &kp GRAVE         &kp N1  &kp N2   &kp N3  &kp BSLH             &none  &none          &none          &none              &none            &trans
                                   &kp DOT  &kp N0  &kp MINUS            &none  &none          &none
             >;
+
+            label = "Number";
         };
 
         Sym {
@@ -240,6 +252,8 @@
 &none  &kp GRAVE       &kp EXCLAMATION  &kp AT_SIGN           &kp HASH               &kp PIPE           &none  &none     &none     &none      &none      &none
                                         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE     &none  &none     &none
             >;
+
+            label = "Sym";
         };
 
         Fun {
@@ -248,6 +262,17 @@
 &none  &kp F11  &kp F4  &kp F5     &kp F6   &none        &none  &kp RGUI  &kp RALT  &kp RCTRL  &kp RSHFT  &none
 &none  &kp F10  &kp F1  &kp F2     &kp F3   &none        &none  &none     &none     &none      &none      &none
                         &kp K_APP  &kp TAB  &kp SPACE    &none  &none     &none
+            >;
+
+            label = "Fun";
+        };
+
+        layer_8 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
