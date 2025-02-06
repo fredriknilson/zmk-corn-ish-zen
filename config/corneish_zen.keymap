@@ -7,6 +7,7 @@
 
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/pointing.h>
@@ -36,8 +37,6 @@
 };
 
 / {
-    behaviors {
-    };
 };
 
 / {
@@ -107,10 +106,10 @@
             //                   | LTR | NUM | SPC |   | ENT | NAV | FNC |
 
             bindings = <
-&kp F1      &kp F2            &kp F3      &kp F4      &kp F5             &kp F6             &none   &none          &none          &none              &none            &none
-&kp F7      &kp F8            &kp F9      &kp F10     &kp F11            &kp F12            &none   &kp RIGHT_WIN  &kp RIGHT_ALT  &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &none
-&kp K_PREV  &kp K_PLAY_PAUSE  &kp K_NEXT  &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP    &none   &none          &none          &none              &none            &none
-                                          &trans      &trans             &trans             &trans  &trans         &trans
+&kp F1      &kp F2            &kp F3      &kp F4      &kp F5             &kp F6             &bt BT_CLR_ALL  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2       &bt BT_SEL 3     &bt BT_SEL 4
+&kp F7      &kp F8            &kp F9      &kp F10     &kp F11            &kp F12            &none           &kp RIGHT_WIN  &kp RIGHT_ALT  &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &none
+&kp K_PREV  &kp K_PLAY_PAUSE  &kp K_NEXT  &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP    &none           &none          &none          &none              &none            &none
+                                          &trans      &trans             &trans             &trans          &trans         &trans
             >;
 
             label = "Fun";
