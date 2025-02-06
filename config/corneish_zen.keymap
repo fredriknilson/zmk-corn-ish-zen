@@ -18,6 +18,9 @@
 #define NAV 2
 #define FNC 3
 
+&mt { flavor = "tap-preferred"; };
+&lt {};
+
 / {
     chosen {
         zmk,matrix_transform = &default_transform;
