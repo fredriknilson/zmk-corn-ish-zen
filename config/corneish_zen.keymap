@@ -19,7 +19,9 @@
 #define FNC 3
 
 &mt { flavor = "tap-preferred"; };
-&lt {};
+
+&lt {
+};
 
 / {
     chosen {
@@ -35,8 +37,6 @@
 };
 
 / {
-    behaviors {
-    };
 };
 
 / {
@@ -151,10 +151,10 @@
 
         Num {
             bindings = <
-&kp EQUAL     &kp N1        &kp N2      &kp N3         &kp N4        &kp N5           &kp N6         &kp N7        &kp N8        &kp N9        &kp N0        &kp MINUS
-&kp LS(PLUS)  &kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)    &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)  &kp LS(UNDER)
-&trans        &trans        &trans      &trans         &trans        &trans           &trans         &trans        &trans        &trans        &trans        &trans
-                                        &trans         &trans        &trans           &trans         &trans        &trans
+&kp EQUAL  &kp N1    &kp N2  &kp N3    &kp N4      &kp N5         &kp N6     &kp N7         &kp N8        &kp N9                &kp N0                 &kp MINUS
+&kp PLUS   &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER
+&trans     &trans    &trans  &trans    &trans      &trans         &trans     &trans         &trans        &trans                &trans                 &trans
+                             &trans    &trans      &trans         &trans     &trans         &trans
             >;
 
             label = "Num";
