@@ -60,21 +60,21 @@
         AE: AE {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(A)>;
+            bindings = <&kp RA(A)>;
             label = "AE";
         };
 
         AO: AO {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(W)>;
+            bindings = <&kp RA(W)>;
             label = "AO";
         };
 
         OE: OE {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(O)>;
+            bindings = <&kp RA(O)>;
             label = "OE";
         };
     };
