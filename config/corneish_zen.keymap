@@ -56,28 +56,6 @@
 };
 
 / {
-    macros {
-        AE: AE {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RA(A)>;
-            label = "AE";
-        };
-
-        AO: AO {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RA(W)>;
-            label = "AO";
-        };
-
-        OE: OE {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RA(O)>;
-            label = "OE";
-        };
-    };
 };
 
 / {
@@ -140,8 +118,8 @@
 
         Eur {
             bindings = <
-&trans  &trans  &AO     &trans  &trans  &trans    &trans  &trans  &trans  &OE     &trans  &trans
-&trans  &AE     &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
