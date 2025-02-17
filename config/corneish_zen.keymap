@@ -18,10 +18,12 @@
 #define NAV 2
 #define FNC 3
 
-&mt { flavor = "tap-preferred"; };
-
-&lt {
+&mt {
+    flavor = "tap-preferred";
+    quick-tap-ms = <200>;
 };
+
+&lt { quick-tap-ms = <200>; };
 
 / {
     chosen {
