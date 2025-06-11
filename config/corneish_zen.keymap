@@ -35,30 +35,40 @@
 &kp GRAVE  &kp Q             &kp W               &kp E           &kp R       &kp T          &kp Y        &kp U            &kp I            &kp O               &kp P                  &kp RA(W)
 &kp TAB    &mt LEFT_SHIFT A  &mt LEFT_CONTROL S  &mt LEFT_ALT D  &mt LGUI F  &kp G          &kp H        &mt RIGHT_GUI J  &mt RIGHT_ALT K  &mt LEFT_CONTROL L  &mt RIGHT_SHIFT RA(O)  &kp RA(A)
 &kp MINUS  &kp Z             &kp X               &kp C           &kp V       &kp B          &kp N        &kp M            &kp COMMA        &kp DOT             &kp QMARK              &kp SQT
-                                                 &lt 3 ESCAPE    &lt 1 TAB   &lt 2 SPACE    &lt 2 ENTER  &lt 1 BACKSPACE  &lt 3 DELETE
+                                                 &lt 4 ESCAPE    &lt 1 TAB   &lt 2 SPACE    &lt 2 ENTER  &lt 1 BACKSPACE  &lt 4 DELETE
             >;
 
             label = "Base";
         };
 
+        Sym {
+            bindings = <
+&kp TILDE   &kp SQT          &kp DQT       &kp CARET      &kp QMARK      &kp RA(SQT)    &kp LT     &kp LBKT   &kp UNDER  &kp RBKT  &kp GT     &kp RA(GRAVE)
+&kp GRAVE   &mt LSHIFT EXCL  &mt LCTRL AT  &mt LALT HASH  &mt LGUI DLLR  &kp PRCNT      &kp LBRC   &kp LPAR   &kp COLON  &kp RPAR  &kp RBRC   &kp RA(SEMI)
+&kp RA(N5)  &kp TILDE        &kp AMPS      &kp SEMI       &kp BSLH       &kp PIPE       &kp SLASH  &kp ASTRK  &kp MINUS  &kp PLUS  &kp EQUAL  &kp RA(RS(S))
+                                           &trans         &trans         &trans         &trans     &trans     &trans
+            >;
+
+            label = "Symbols";
+        };
+
         Nav {
             bindings = <
-&bt BT_CLR_ALL &bt BT_SEL 0 &bt BT_SEL 1     &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none          &kp HOME            &kp PAGE_UP    &kp PAGE_DOWN  &kp END             &none  
-&none          &kp LSHIFT   &kp LEFT_CONTROL &kp LEFT_ALT   &kp LEFT_META  &none          &none          &kp LEFT_ARROW      &kp UP_ARROW   &kp DOWN_ARROW &kp RIGHT_ARROW     &none
-&none          &none        &none            &none          &none          &none          &kp K_PREV     &kp K_PLAY_PAUSE    &kp K_NEXT     &kp K_MUTE     &kp C_VOLUME_DOWN   &kp C_VOLUME_UP
-                                             &none          &none          &none          &none          &none               &none
+&bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4    &none       &kp HOME          &kp PAGE_UP   &kp PAGE_DOWN   &kp END            &none
+&none           &kp LSHIFT    &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_META  &none           &none       &kp LEFT_ARROW    &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW    &none
+&none           &none         &none             &none         &none          &none           &kp K_PREV  &kp K_PLAY_PAUSE  &kp K_NEXT    &kp K_MUTE      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
+                                                &none         &none          &none           &none       &none             &none
             >;
 
             label = "Navigation";
         };
 
-
         Mus {
             bindings = <
-&none  &none       &none             &none         &none          &none    &none      &msc SCRL_LEFT &msc SCRL_UP  &msc SCRL_DOWN  &msc SCRL_RIGHT  &none
-&none  &kp LSHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_META  &none    &none      &mmv MOVE_LEFT  &mmv MOVE_UP &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
-&none  &none       &none             &none         &none          &none    &none      &none           &none        &none           &none            &none
-                                     &none         &none          &none    &mkp MB1        &mkp MB2        &mkp MB3
+&none  &none       &none             &none         &none          &none    &none     &msc SCRL_LEFT  &msc SCRL_UP  &msc SCRL_DOWN  &msc SCRL_RIGHT  &none
+&none  &kp LSHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_META  &none    &none     &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
+&none  &none       &none             &none         &none          &none    &none     &none           &none         &none           &none            &none
+                                     &none         &none          &none    &mkp MB1  &mkp MB2        &mkp MB3
             >;
 
             label = "Mouse";
@@ -66,13 +76,13 @@
 
         Num {
             bindings = <
-&kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &kp F11   &kp F12
-&none     &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &none
-&none     &none     &none     &none     &none     &none     &none     &none     &none     &none     &none     &none
-&trans    &trans    &trans    &trans    &trans    &trans
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6    &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&none   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7  &kp N8  &kp N9   &kp N0   &none
+&none   &none   &none   &none   &none   &none     &none   &none   &none   &none    &none    &none
+                        &none   &none   &none     &none   &none   &none
             >;
 
-            label = "Num";
+            label = "Numbers";
         };
     };
 };
