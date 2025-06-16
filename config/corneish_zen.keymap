@@ -43,10 +43,10 @@
 
         Sym {
             bindings = <
-&kp TILDE   &kp SQT          &kp DQT       &kp CARET      &kp QMARK      &kp RA(SQT)    &kp LT     &kp LBKT       &kp UNDER       &kp RBKT        &kp GT           &kp RA(GRAVE)
-&kp GRAVE   &mt LSHIFT EXCL  &mt LCTRL AT  &mt LALT HASH  &mt LGUI DLLR  &kp PRCNT      &kp LBRC   &mt RGUI LPAR  &mt RALT COLON  &mt RCTRL RPAR  &mt RSHIFT RBRC  &kp RA(SEMI)
-&kp RA(N5)  &kp TILDE        &kp AMPS      &kp SEMI       &kp BSLH       &kp PIPE       &kp SLASH  &kp ASTRK      &kp MINUS       &kp PLUS        &kp EQUAL        &kp RA(RS(S))
-                                           &trans         &trans         &trans         &trans     &trans         &trans
+&kp TILDE    &kp SQT          &kp DQT       &kp LT         &kp GT         &kp PLUS       &kp UNDER  &kp LBKT       &kp RBKT       &kp BSLH         &kp COLON        &kp RA(SEMICOLON)
+&kp GRAVE    &mt LSHIFT EXCL  &mt LCTRL AT  &mt LALT HASH  &mt LGUI DLLR  &kp EQUAL      &kp MINUS  &mt RGUI LPAR  &mt RALT RPAR  &mt RCTRL SLASH  &mt RSHIFT SEMI  &kp RA(RS(S))
+&kp RA(SQT)  &kp AMPS         &kp SQT       &kp CARET      &kp RA(N5)     &kp PERCENT    &kp ASTRK  &kp LBRC       &kp RBRC       &kp PIPE         &trans           &kp RA(GRAVE)
+                                            &trans         &trans         &trans         &trans     &trans         &trans
             >;
 
             label = "Symbols";
