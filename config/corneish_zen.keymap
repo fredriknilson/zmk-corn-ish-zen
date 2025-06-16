@@ -27,6 +27,15 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        mus {
+            bindings = <&mo 3>;
+            key-positions = <37 38>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -46,7 +55,7 @@
 &kp TILDE    &kp SQT          &kp DQT       &kp LT         &kp GT         &kp PLUS       &kp UNDER  &kp LBKT       &kp RBKT       &kp BSLH         &kp COLON        &kp RA(SEMICOLON)
 &kp GRAVE    &mt LSHIFT EXCL  &mt LCTRL AT  &mt LALT HASH  &mt LGUI DLLR  &kp EQUAL      &kp MINUS  &mt RGUI LPAR  &mt RALT RPAR  &mt RCTRL SLASH  &mt RSHIFT SEMI  &kp RA(RS(S))
 &kp RA(SQT)  &kp AMPS         &kp SQT       &kp CARET      &kp RA(N5)     &kp PERCENT    &kp ASTRK  &kp LBRC       &kp RBRC       &kp PIPE         &trans           &kp RA(GRAVE)
-                                            &trans         &trans         &trans         &trans     &trans         &trans
+                                            &trans         &trans         &tog 1         &tog 1     &trans         &trans
             >;
 
             label = "Symbols";
@@ -57,7 +66,7 @@
 &bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4    &none       &kp HOME          &kp PAGE_UP   &kp PAGE_DOWN   &kp END            &none
 &none           &kp LSHIFT    &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_META  &none           &none       &kp LEFT_ARROW    &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW    &none
 &none           &none         &none             &none         &none          &none           &kp K_PREV  &kp K_PLAY_PAUSE  &kp K_NEXT    &kp K_MUTE      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
-                                                &none         &none          &none           &none       &none             &none
+                                                &none         &tog 2         &none           &none       &tog 2            &none
             >;
 
             label = "Navigation";
@@ -67,7 +76,7 @@
             bindings = <
 &none  &none       &none             &none         &none          &none    &none     &msc SCRL_LEFT  &msc SCRL_UP  &msc SCRL_DOWN  &msc SCRL_RIGHT  &none
 &none  &kp LSHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_META  &none    &none     &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
-&none  &none       &none             &none         &none          &none    &none     &none           &none         &none           &none            &none
+&none  &none       &none             &none         &none          &none    &none     &none           &none         &none           &none            &to 3
                                      &none         &none          &none    &mkp MB1  &mkp MB2        &mkp MB3
             >;
 
@@ -79,7 +88,7 @@
 &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6    &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
 &none   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7  &kp N8  &kp N9   &kp N0   &none
 &none   &none   &none   &none   &none   &none     &none   &none   &none   &none    &none    &none
-                        &none   &none   &none     &none   &none   &none
+                        &none   &none   &tog 4    &tog 4  &none   &none
             >;
 
             label = "Numbers";
