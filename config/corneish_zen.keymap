@@ -7,6 +7,7 @@
 
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
@@ -96,9 +97,9 @@
 
         Nav {
             bindings = <
-&kp C_VOL_DN  &kp C_VOL_UP  &kp K_MUTE        &kp K_PREV    &kp K_PLAY_PAUSE  &kp K_NEXT    &kp PAGE_UP    &kp HOME      &kp UP    &kp END       &none  &none
-&kp LSHIFT    &kp LSHIFT    &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_META     &none         &kp PAGE_DOWN  &kp LEFT      &kp DOWN  &kp RIGHT     &none  &none
-&kp LCTRL     &kp LEFT_ALT  &kp LEFT_GUI      &none         &none             &none         &none          &kp LG(LBKT)  &none     &kp LG(RBKT)  &none  &none
+&kp C_VOL_DN  &kp C_VOL_UP  &kp K_MUTE        &kp K_PREV    &kp K_PLAY_PAUSE  &kp K_NEXT    &kp PAGE_UP    &kp HOME      &kp UP    &kp END       &none  &bt BT_CLR_ALL
+&kp LSHIFT    &kp LSHIFT    &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_META     &none         &kp PAGE_DOWN  &kp LEFT      &kp DOWN  &kp RIGHT     &none  &bt BT_NXT
+&kp LCTRL     &kp LEFT_ALT  &kp LEFT_GUI      &none         &none             &none         &none          &kp LG(LBKT)  &none     &kp LG(RBKT)  &none  &bt BT_PRV
                                               &none         &none             &none         &none          &none         &none
             >;
 
