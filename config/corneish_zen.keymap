@@ -75,9 +75,9 @@
 
         Sym {
             bindings = <
-&kp RA(SQT)     &kp GRAVE           &kp LT             &kp GT         &kp MINUS       &kp PIPE       &kp CARET  &kp LBRC       &kp RBRC       &kp DLLR             &kp DOT            &none
+&kp RA(SQT)     &kp GRAVE           &kp LT             &kp GT         &kp MINUS       &kp PIPE       &kp CARET  &kp LBRC       &kp RBRC       &kp COLON            &kp DOLLAR         &none
 &kp LEFT_SHIFT  &mt LSHIFT EXCL     &mt LCTRL ASTRK    &mt LALT FSLH  &mt LGUI EQUAL  &kp AMPS       &kp HASH   &mt RGUI LPAR  &mt RALT RPAR  &mt RCTRL SEMICOLON  &mt RSHIFT DQT     &kp LEFT_SHIFT
-&kp LCTRL       &mt LEFT_ALT TILDE  &mt LEFT_GUI PLUS  &kp BSLH       &kp UNDER       &kp PERCENT    &kp AT     &kp LBKT       &kp RBKT       &mt RIGHT_GUI COLON  &mt RIGHT_ALT SQT  &kp RCTRL
+&kp LCTRL       &mt LEFT_ALT TILDE  &mt LEFT_GUI PLUS  &kp BSLH       &kp UNDER       &kp PERCENT    &kp AT     &kp LBKT       &kp RBKT       &mt RIGHT_GUI DOT    &mt RIGHT_ALT SQT  &kp RCTRL
                                                        &trans         &trans          &tog 1         &tog 1     &trans         &trans
             >;
 
