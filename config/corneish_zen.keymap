@@ -102,10 +102,10 @@
 
         Sym {
             bindings = <
-&caps_word      &kp GRAVE           &kp LT             &kp GT         &kp MINUS       &kp PIPE       &kp CARET  &kp LBRC       &kp RBRC       &kp COLON            &kp DOLLAR      &kp RA(N5)
-&kp LEFT_SHIFT  &mt LSHIFT EXCL     &mt LCTRL ASTRK    &mt LALT FSLH  &mt LGUI EQUAL  &kp AMPS       &kp HASH   &mt RGUI LPAR  &mt RALT RPAR  &mt RCTRL SEMICOLON  &mt RSHIFT DQT  &kp LEFT_SHIFT
-&kp LCTRL       &mt LEFT_ALT TILDE  &mt LEFT_GUI PLUS  &kp BSLH       &kp UNDER       &kp PERCENT    &kp AT     &kp LBKT       &kp RBKT       &kp RA(SQT)          &kp SQT         &kp RIGHT_ALT
-                                                       &trans         &trans          &tog 1         &tog 1     &trans         &trans
+&caps_word      &kp GRAVE           &kp LT             &kp GT         &kp MINUS       &kp PIPE       &kp DLLR  &kp LBRC       &kp RBRC       &kp COLON            &kp CARET       &kp RA(N5)
+&kp LEFT_SHIFT  &mt LSHIFT EXCL     &mt LCTRL ASTRK    &mt LALT FSLH  &mt LGUI EQUAL  &kp AMPS       &kp HASH  &mt RGUI LPAR  &mt RALT RPAR  &mt RCTRL SEMICOLON  &mt RSHIFT DQT  &kp LEFT_SHIFT
+&kp LCTRL       &mt LEFT_ALT TILDE  &mt LEFT_GUI PLUS  &kp BSLH       &kp UNDER       &kp PERCENT    &kp AT    &kp LBKT       &kp RBKT       &kp RA(SQT)          &kp SQT         &kp RIGHT_ALT
+                                                       &trans         &trans          &tog 1         &tog 1    &trans         &trans
             >;
 
             label = "Symbols";
