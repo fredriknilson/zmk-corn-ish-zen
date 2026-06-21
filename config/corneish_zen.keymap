@@ -9,7 +9,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
 
 &mt {
     flavor = "tap-preferred";
@@ -81,10 +80,10 @@
 
         Sym {
             bindings = <
-&none  &kp EXCL   &kp AT     &kp HASH    &kp DLLR   &kp PRCNT    &kp PIPE  &kp LBRC  &kp RBRC  &kp COLON  &kp SQT  &kp RA(N5)
-&none  &kp CARET  &kp AMPS   &kp ASTRK   &kp MINUS  &kp EQUAL    &kp FSLH  &kp LPAR  &kp RPAR  &kp SEMI   &kp DQT  &none
-&none  &kp GRAVE  &kp TILDE  &kp LA(SQT) &kp UNDER  &kp PLUS     &kp BSLH  &kp LBKT  &kp RBKT  &kp LT     &kp GT   &none
-                             &trans      &trans     &kp C_AC_SEARCH    &kp C_AC_SEARCH  &trans   &trans
+&none  &kp EXCL   &kp AT     &kp HASH     &kp DLLR   &kp PRCNT          &kp PIPE         &kp LBRC  &kp RBRC  &kp COLON  &kp SQT  &kp RA(N5)
+&none  &kp CARET  &kp AMPS   &kp ASTRK    &kp MINUS  &kp EQUAL          &kp FSLH         &kp LPAR  &kp RPAR  &kp SEMI   &kp DQT  &none
+&none  &kp GRAVE  &kp TILDE  &kp LA(SQT)  &kp UNDER  &kp PLUS           &kp BSLH         &kp LBKT  &kp RBKT  &kp LT     &kp GT   &none
+                             &trans       &trans     &kp C_AC_SEARCH    &kp C_AC_SEARCH  &trans    &trans
             >;
 
             label = "Symbols";
@@ -103,24 +102,13 @@
 
         Nav {
             bindings = <
-&none            &kp LC(N1)          &kp LC(N2)          &kp LC(N3)       &kp LC(N4)             &none      &kp PAGE_UP    &kp HOME      &kp UP    &kp END       &none  &bt BT_CLR_ALL
-&kp C_VOL_DN     &mt LSHIFT K_MUTE   &mt LCTRL C_VOL_UP  &mt LALT K_PREV  &mt LGUI K_PLAY_PAUSE  &kp K_NEXT &kp PAGE_DOWN  &kp LEFT      &kp DOWN  &kp RIGHT     &none  &bt BT_NXT
-&none            &kp LG(Z)           &kp LG(X)           &kp LG(C)        &kp LG(V)              &none      &none          &kp LG(LBKT)  &none     &kp LG(RBKT)  &none  &bt BT_PRV
-                                                         &trans           &trans                 &trans     &trans         &trans        &trans
+&none         &kp LC(N1)         &kp LC(N2)          &kp LC(N3)       &kp LC(N4)             &none         &kp PAGE_UP    &kp HOME      &kp UP    &kp END       &none  &bt BT_CLR_ALL
+&kp C_VOL_DN  &mt LSHIFT K_MUTE  &mt LCTRL C_VOL_UP  &mt LALT K_PREV  &mt LGUI K_PLAY_PAUSE  &kp K_NEXT    &kp PAGE_DOWN  &kp LEFT      &kp DOWN  &kp RIGHT     &none  &bt BT_NXT
+&none         &kp LG(Z)          &kp LG(X)           &kp LG(C)        &kp LG(V)              &none         &none          &kp LG(LBKT)  &none     &kp LG(RBKT)  &none  &bt BT_PRV
+                                                     &trans           &trans                 &trans        &trans         &trans        &trans
             >;
 
             label = "Navigation";
-        };
-
-        Mus {
-            bindings = <
-&none      &none     &none     &none  &none  &none    &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP  &msc SCRL_RIGHT  &none  &none
-&kp LSHFT  &none     &none     &none  &none  &none    &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none  &none
-&kp LCTRL  &kp LALT  &kp LGUI  &none  &none  &none    &none           &none           &none         &none            &none  &none
-                               &none  &none  &none    &mkp MB1        &mkp MB2        &mkp MB3
-            >;
-
-            label = "Mouse";
         };
     };
 };
