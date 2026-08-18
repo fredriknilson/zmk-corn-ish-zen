@@ -105,8 +105,8 @@
         Nav {
             bindings = <
 &none         &kp LC(N1)         &kp LC(N2)          &kp LC(N3)       &kp LC(N4)             &none         &kp PAGE_UP    &kp HOME      &kp UP    &kp END       &none  &bt BT_CLR_ALL
-&kp C_VOL_DN  &mt LSHIFT K_MUTE  &mt LCTRL C_VOL_UP  &mt LALT K_PREV  &mt LGUI K_PLAY_PAUSE  &kp K_NEXT    &kp PAGE_DOWN  &kp LEFT      &kp DOWN  &kp RIGHT     &none  &bt BT_NXT
-&none         &kp LG(Z)          &kp LG(X)           &kp LG(C)        &kp LG(V)              &none         &none          &kp LG(LBKT)  &none     &kp LG(RBKT)  &studio_unlock  &bt BT_PRV
+&kp C_VOL_DN  &mt LSHIFT K_MUTE  &mt LCTRL C_VOL_UP  &mt LALT K_PREV  &mt LGUI K_PLAY_PAUSE  &kp K_NEXT    &kp PAGE_DOWN  &kp LEFT      &kp DOWN  &kp RIGHT     &none  &bt BT_SEL 0
+&none         &kp LG(Z)          &kp LG(X)           &kp LG(C)        &kp LG(V)              &none         &none          &kp LG(LBKT)  &none     &kp LG(RBKT)  &studio_unlock  &bt BT_SEL 1
                                                      &trans           &trans                 &trans        &trans         &kp DEL       &trans
             >;
 
