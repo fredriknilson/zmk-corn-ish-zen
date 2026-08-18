@@ -13,5 +13,8 @@
 #
 ---
 include:
+  # ZMK Studio runs on the central half (left) over USB
   - board: corneish_zen_left//zmk
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
   - board: corneish_zen_right//zmk

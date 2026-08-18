@@ -19,9 +19,11 @@
 
 / {
     chosen {
-        zmk,matrix_transform = &default_transform;
+        // ZMK Studio requires physical layouts instead of a fixed matrix transform.
+        // The board already selects the 6-column layout; swap for the 5-column one below.
+        zmk,physical-layout = &foostan_corne_6col_layout;
 
-        //zmk,matrix_transform = &five_column_transform;
+        //zmk,physical-layout = &foostan_corne_5col_layout;
     };
 };
 
@@ -75,7 +77,7 @@
                                                 &lt 3 ESCAPE  &lt 2 TAB   &lt 1 SPACE    &lt 1 ENTER  &lt 2 BACKSPACE  &lt 3 DELETE
             >;
 
-            label = "Base";
+            display-name = "Base";
         };
 
         Sym {
@@ -86,7 +88,7 @@
                              &trans       &trans     &kp C_AC_SEARCH    &kp C_AC_SEARCH  &trans    &trans
             >;
 
-            label = "Symbols";
+            display-name = "Symbols";
         };
 
         Num {
@@ -97,18 +99,18 @@
                                          &none        &none        &none     &none   &none   &none
             >;
 
-            label = "Numbers";
+            display-name = "Numbers";
         };
 
         Nav {
             bindings = <
 &none         &kp LC(N1)         &kp LC(N2)          &kp LC(N3)       &kp LC(N4)             &none         &kp PAGE_UP    &kp HOME      &kp UP    &kp END       &none  &bt BT_CLR_ALL
 &kp C_VOL_DN  &mt LSHIFT K_MUTE  &mt LCTRL C_VOL_UP  &mt LALT K_PREV  &mt LGUI K_PLAY_PAUSE  &kp K_NEXT    &kp PAGE_DOWN  &kp LEFT      &kp DOWN  &kp RIGHT     &none  &bt BT_NXT
-&none         &kp LG(Z)          &kp LG(X)           &kp LG(C)        &kp LG(V)              &none         &none          &kp LG(LBKT)  &none     &kp LG(RBKT)  &none  &bt BT_PRV
+&none         &kp LG(Z)          &kp LG(X)           &kp LG(C)        &kp LG(V)              &none         &none          &kp LG(LBKT)  &none     &kp LG(RBKT)  &studio_unlock  &bt BT_PRV
                                                      &trans           &trans                 &trans        &trans         &kp DEL       &trans
             >;
 
-            label = "Navigation";
+            display-name = "Navigation";
         };
     };
 };
